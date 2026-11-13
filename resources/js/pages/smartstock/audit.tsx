@@ -1,0 +1,3 @@
+import {Head} from '@inertiajs/react';
+import {Cell,Empty,date,PageTitle,Pagination,Panel,Table} from './ui';
+export default function Audit({items}:{items:any}){return <><Head title="Audit Log"/><PageTitle title="Nhật ký kiểm toán" subtitle="Truy vết thao tác thay đổi trạng thái và biến động kho"/><Panel><Table head={['Ngày','Người dùng','Hành động','Loại','Bản ghi ID']}>{items.data.map((x:any)=><tr key={x.id}><Cell>{date(x.created_at)}</Cell><Cell>#{x.user_id||'Hệ thống'}</Cell><Cell>{x.action}</Cell><Cell>{x.entity_type}</Cell><Cell>{x.entity_id}</Cell></tr>)}</Table>{!items.data.length&&<Empty/>}<Pagination data={items}/></Panel></>}

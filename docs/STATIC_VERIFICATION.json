@@ -1,0 +1,17 @@
+{
+  "release": "SmartStock DSS database aligned v1.0",
+  "date": "2026-10-25",
+  "baseline": "user-selected SmartStock_DSS_Laravel_React_Source_2026_10_25(1).zip",
+  "sql_reference": "dss_db(1).sql",
+  "sql_core_table_count": 25,
+  "php_files_linted": 82,
+  "php_lint": "PASS",
+  "typescript_check": "PASS",
+  "typescript_command": "tsc --noEmit",
+  "composer_install": "NOT_RUN (no composer in execution environment)",
+  "mysql_migrate": "NOT_RUN (no database engine in execution environment)",
+  "phpunit_tests": "NOT_RUN (no composer dependencies/DB driver)",
+  "vite_build": "NOT_RUN (depends on Laravel vendor/Artisan)",
+  "e2e_browser": "NOT_RUN",
+  "git_commit": "not included; ZIP is a clean source release"
+}

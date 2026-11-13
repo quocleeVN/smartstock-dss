@@ -1,0 +1,11 @@
+.git
+.github
+node_modules
+vendor
+.env
+.env.*
+*.rar
+*.zip
+smartstock_dss
+storage/*.key
+tests
