@@ -16,6 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withCommands([\App\Console\Commands\SmartStockDoctor::class, \App\Console\Commands\RefreshSmartStockAlerts::class])
     ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->trustProxies(at: '*');
         $middleware->alias(['role' => \App\Http\Middleware\RequireRole::class]);
         $middleware->encryptCookies(except: ['appearance', 'sidebar_state']);
 
